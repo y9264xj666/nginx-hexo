@@ -1,0 +1,15 @@
+name: nginx-hexo
+services:
+    nginx-hexo:
+        container_name: hexo
+        volumes:
+            - ~/hexo:/app/hexo
+            # - /tmp/hexo-logs://var/log/nginx
+        ports:
+            - 8000:8000
+        environment:
+            - HOST=xj9264.xyz
+            - GITREPO=https://git.xj9264.xyz/myproj/hexo.git
+            - GIT_USERNAME=test1234
+            - GIT_PASSWD=test1234
+        image: nginx-hexo
