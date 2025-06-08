@@ -12,4 +12,5 @@ services:
             - GITREPO=https://git.xj9264.xyz/myproj/hexo.git
             - GIT_USERNAME=test1234
             - GIT_PASSWD=test1234
+            - NODE_VERSION=18
         image: nginx-hexo
