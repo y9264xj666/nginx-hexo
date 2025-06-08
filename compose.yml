@@ -5,6 +5,8 @@ services:
         volumes:
             - ~/hexo:/app/hexo
             # - /tmp/hexo-logs://var/log/nginx
+        network_mode:
+            - bridge
         ports:
             - 8000:8000
         environment:
