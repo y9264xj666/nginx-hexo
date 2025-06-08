@@ -14,13 +14,11 @@ fi
 
 git config --global --add safe.directory /app/hexo
 
-echo /etc/nginx/nginx.conf
-cat /etc/nginx/nginx.conf
-nginx -t -c /etc/nginx/nginx.conf
 
-[ ! -d "/app/hexo/public" ] \
-	&& git clone $GITREPO /app/hexo/ \
-	&& cd /app/hexo \
-	&& npm install 
-cd /app/hexo ; hexo g
+[ ! -f "/app/hexo/package.json" ] \
+	&& git clone $GITREPO /app/hexo/
+
+cd /app/hexo
+npm install 
+hexo g
 nginx -g 'daemon off;'
