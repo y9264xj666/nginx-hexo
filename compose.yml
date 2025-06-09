@@ -1,5 +1,5 @@
-# name: nginx-hexo
-name: nginx-hexo:node-alpine
+name: nginx-hexo
+# name: nginx-hexo:node-alpine
 services:
     nginx-hexo:
         container_name: hexo-node
