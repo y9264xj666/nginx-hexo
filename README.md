@@ -13,7 +13,7 @@ Nginx 做前端代理，使用node server监听Github的webhook。只要Github�
 
 docker run --name hexo \
 -v /tmp/hexo:/app/hexo \
--p 80:80 \
+-p 8081:8081 \
 -e HOST=#{Your domain} \
 -e GITREPO=#{Your git repo} \
 -e GIT_USERNAME=#{Your git username} \
@@ -30,7 +30,7 @@ services:
             - ~/hexo:/app/hexo
             # - /tmp/hexo-logs://var/log/nginx
         ports:
-            - 8000:8000
+            - 8081:8081
         environment:
             - HOST=xj9264.xyz
             - GITREPO=https://git.xj9264.xyz/myproj/hexo.git

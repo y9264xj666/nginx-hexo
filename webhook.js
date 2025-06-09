@@ -33,7 +33,7 @@ router_handler['/webhook'] = function(request,response) {
 	if (event == "push") {
 		request.on('data',(chunk) => {
 			let payload =  JSON.parse(chunk);
-			exec(`cd /app/hexo && git pull origin master && hexo g`,(err,stdout,stderr) => {
+			exec(`cd /app/hexo && git pull origin master && npm install && hexo g`,(err,stdout,stderr) => {
 				if (err) {
 					console.error(`exec error: ${err}`);
 				    return;
