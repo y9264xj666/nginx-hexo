@@ -1,17 +1,18 @@
 name: nginx-hexo
-# name: nginx-hexo:node-alpine
 services:
     nginx-hexo:
-        container_name: hexo-node
-        volumes:
-            - ~/hexo:/app/hexo
-            # - /tmp/hexo-logs://var/log/nginx
-        network_mode: "bridge"
-        ports:
-            - 8081:8081
+        container_name: nginx-hexo
         environment:
-            - HOST=xj9264.xyz
-            - GITREPO=https://git.xj9264.xyz/myproj/hexo.git
-            - GIT_USERNAME=test1234
-            - GIT_PASSWD=test1234
+            - UID=1000
+            - GID=1000
+            - GIT_REPO=https://git.xj9264.xyz/myproj/hexo.git
+            - GIT_USER=test1234
+            - GIT_PASSWORD=test1234
+            - PORT=8081
+            - HEXO_DIR=/app/hexo
+        ports:
+            - 8080:8081
+            # - 9000:9000
+        # volumes:
+            # - $(pwd)/hexo-data:/app/hexo
         image: nginx-hexo
