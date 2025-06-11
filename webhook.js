@@ -100,6 +100,7 @@ server.listen(PORT, () => {
 
 
 /*
+// 上述权限不足，提出的使用sh脚本替换执行的候补方法
 const http = require('http');
 const { exec } = require('child_process');
 const fs = require('fs');
