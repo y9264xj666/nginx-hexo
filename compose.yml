@@ -16,5 +16,5 @@ services:
             - 8081:8081
             # - 9000:9000
         # volumes:
-            # - $(pwd)/hexo-data:/app/hexo
+            # - ~/hexo:/app/hexo
         image: nginx-hexo
