@@ -6,35 +6,38 @@ Nginx 做前端代理，使用node server监听Github的webhook。只要Github�
 可选参数：
 1. `HOST`hexo绑定的域名
 2. `GITREPO`hexo网站远程git地址
-3. `GIT_USERNAME`拉取git更新时，做用户验证的用户名
-4. `GIT_PASSWD`拉取git更新时，做用户验证的用户密码
+3. `GIT_USER`拉取git更新时，做用户验证的用户名
+4. `GIT_PASSWORD`拉取git更新时，做用户验证的用户密码
 
 ```
-
-docker run --name hexo \
--v /tmp/hexo:/app/hexo \
--p 8081:8081 \
--e HOST=#{Your domain} \
--e GITREPO=#{Your git repo} \
--e GIT_USERNAME=#{Your git username} \
--e GIT_PASSWD=#{Your git password} \
--d nginx-hexo
+docker run -d --name hexo-blog \
+  -e UID=$(id -u) \
+  -e GID=$(id -g) \
+  -e GIT_REPO=https://github.com/yourname/your-hexo-repo.git \
+  -e PORT=8081 \
+  -e HEXO_DIR=/app/hexo \
+  -p 8080:8081 \
+  -v $(pwd)/hexo-data:/app/hexo \
+  hexo-blog
 ```
 docker compose用法参考项目内示例的`compose.yml`：
 ```yml
-name: < project name >
+name: nginx-hexo
 services:
     nginx-hexo:
-        container_name: hexo
-        volumes:
-            - ~/hexo:/app/hexo
-            # - /tmp/hexo-logs://var/log/nginx
-        ports:
-            - 8081:8081
+        container_name: nginx-hexo
         environment:
-            - HOST=xj9264.xyz
-            - GITREPO=https://git.xj9264.xyz/myproj/hexo.git
-            - GIT_USERNAME=test1234
-            - GIT_PASSWD=test1234
+            - UID=1000
+            - GID=1000
+            - GIT_REPO=https://git.xj9264.xyz/myproj/hexo.git
+            - GIT_USER=test1234
+            - GIT_PASSWORD=test1234
+            - PORT=8081
+            - HEXO_DIR=/app/hexo
+        ports:
+            - 8080:8081
+            # - 9000:9000
+        # volumes:
+            # - $(pwd)/hexo-data:/app/hexo
         image: nginx-hexo
 ```

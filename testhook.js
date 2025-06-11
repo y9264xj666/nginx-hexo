@@ -1,0 +1,213 @@
+var request = require('request');
+var options = {
+  'method': 'POST',
+  'url': '192.168.10.82:8080/webhook',
+  'headers': {
+    'Content-Type': 'application/json',
+    'X-GitHub-Delivery': 'c6bacca8-f16d-4a8f-85f3-eb8db9a4f778',
+    'X-GitHub-Event': 'push',
+    'X-GitHub-Event-Type': 'push'
+  },
+  body: JSON.stringify({
+    "ref": "refs/heads/master",
+    "before": "69953ac35c90c24783b13cf1bfe902769f4e98a0",
+    "after": "bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+    "compare_url": "https://git.xj9264.xyz/myproj/hexo/compare/69953ac35c90c24783b13cf1bfe902769f4e98a0...bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+    "commits": [
+      {
+        "id": "bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+        "message": "更新 _config.kratos-rebirth.yml\n",
+        "url": "https://git.xj9264.xyz/myproj/hexo/commit/bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+        "author": {
+          "name": "y9264xj666",
+          "email": "1838986872@outlook.com",
+          "username": "y9264xj666"
+        },
+        "committer": {
+          "name": "y9264xj666",
+          "email": "1838986872@outlook.com",
+          "username": "y9264xj666"
+        },
+        "verification": null,
+        "timestamp": "2025-06-10T09:33:52Z",
+        "added": [],
+        "removed": [],
+        "modified": [
+          "_config.kratos-rebirth.yml"
+        ]
+      }
+    ],
+    "total_commits": 1,
+    "head_commit": {
+      "id": "bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+      "message": "更新 _config.kratos-rebirth.yml\n",
+      "url": "https://git.xj9264.xyz/myproj/hexo/commit/bfeb46c92ee8b36601b19fdebb0b36156336af8d",
+      "author": {
+        "name": "y9264xj666",
+        "email": "1838986872@outlook.com",
+        "username": "y9264xj666"
+      },
+      "committer": {
+        "name": "y9264xj666",
+        "email": "1838986872@outlook.com",
+        "username": "y9264xj666"
+      },
+      "verification": null,
+      "timestamp": "2025-06-10T09:33:52Z",
+      "added": [],
+      "removed": [],
+      "modified": [
+        "_config.kratos-rebirth.yml"
+      ]
+    },
+    "repository": {
+      "id": 61,
+      "owner": {
+        "id": 2,
+        "login": "myproj",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "",
+        "email": "",
+        "avatar_url": "https://git.xj9264.xyz/avatars/04a42c4991e1b7b5f26407091a1eb8a1",
+        "html_url": "https://git.xj9264.xyz/myproj",
+        "language": "",
+        "is_admin": false,
+        "last_login": "0001-01-01T00:00:00Z",
+        "created": "2024-04-18T05:57:27Z",
+        "restricted": false,
+        "active": false,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "private",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "myproj"
+      },
+      "name": "hexo",
+      "full_name": "myproj/hexo",
+      "description": "个人主页",
+      "empty": false,
+      "private": true,
+      "fork": false,
+      "template": false,
+      "parent": null,
+      "mirror": false,
+      "size": 1059,
+      "language": "",
+      "languages_url": "https://git.xj9264.xyz/api/v1/repos/myproj/hexo/languages",
+      "html_url": "https://git.xj9264.xyz/myproj/hexo",
+      "url": "https://git.xj9264.xyz/api/v1/repos/myproj/hexo",
+      "link": "",
+      "ssh_url": "ssh://git@xj9264.xyz:20220/myproj/hexo.git",
+      "clone_url": "https://git.xj9264.xyz/myproj/hexo.git",
+      "original_url": "",
+      "website": "",
+      "stars_count": 0,
+      "forks_count": 0,
+      "watchers_count": 2,
+      "open_issues_count": 0,
+      "open_pr_counter": 0,
+      "release_counter": 0,
+      "default_branch": "master",
+      "archived": false,
+      "created_at": "2025-06-04T13:43:33Z",
+      "updated_at": "2025-06-10T09:32:22Z",
+      "archived_at": "1970-01-01T00:00:00Z",
+      "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+      },
+      "has_issues": true,
+      "internal_tracker": {
+        "enable_time_tracker": true,
+        "allow_only_contributors_to_track_time": true,
+        "enable_issue_dependencies": true
+      },
+      "has_wiki": true,
+      "has_pull_requests": true,
+      "has_projects": true,
+      "projects_mode": "all",
+      "has_releases": true,
+      "has_packages": true,
+      "has_actions": true,
+      "ignore_whitespace_conflicts": false,
+      "allow_merge_commits": true,
+      "allow_rebase": true,
+      "allow_rebase_explicit": true,
+      "allow_squash_merge": true,
+      "allow_fast_forward_only_merge": true,
+      "allow_rebase_update": true,
+      "default_delete_branch_after_merge": false,
+      "default_merge_style": "merge",
+      "default_allow_maintainer_edit": false,
+      "avatar_url": "https://git.xj9264.xyz/repo-avatars/61",
+      "internal": false,
+      "mirror_interval": "",
+      "object_format_name": "sha1",
+      "mirror_updated": "0001-01-01T00:00:00Z",
+      "repo_transfer": null,
+      "topics": [],
+      "licenses": null
+    },
+    "pusher": {
+      "id": 1,
+      "login": "y9264xj666",
+      "login_name": "",
+      "source_id": 0,
+      "full_name": "",
+      "email": "y9264xj666@noreply.xj9264.xyz",
+      "avatar_url": "https://git.xj9264.xyz/avatar/f74b1449692ef0c66f7cac97f3460f1f",
+      "html_url": "https://git.xj9264.xyz/y9264xj666",
+      "language": "",
+      "is_admin": false,
+      "last_login": "0001-01-01T00:00:00Z",
+      "created": "2024-04-10T05:45:07Z",
+      "restricted": false,
+      "active": false,
+      "prohibit_login": false,
+      "location": "",
+      "website": "",
+      "description": "",
+      "visibility": "public",
+      "followers_count": 0,
+      "following_count": 0,
+      "starred_repos_count": 0,
+      "username": "y9264xj666"
+    },
+    "sender": {
+      "id": 1,
+      "login": "y9264xj666",
+      "login_name": "",
+      "source_id": 0,
+      "full_name": "",
+      "email": "y9264xj666@noreply.xj9264.xyz",
+      "avatar_url": "https://git.xj9264.xyz/avatar/f74b1449692ef0c66f7cac97f3460f1f",
+      "html_url": "https://git.xj9264.xyz/y9264xj666",
+      "language": "",
+      "is_admin": false,
+      "last_login": "0001-01-01T00:00:00Z",
+      "created": "2024-04-10T05:45:07Z",
+      "restricted": false,
+      "active": false,
+      "prohibit_login": false,
+      "location": "",
+      "website": "",
+      "description": "",
+      "visibility": "public",
+      "followers_count": 0,
+      "following_count": 0,
+      "starred_repos_count": 0,
+      "username": "y9264xj666"
+    }
+  })
+
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
