@@ -10,8 +10,10 @@ services:
             - GIT_PASSWORD=test1234
             - PORT=8081
             - HEXO_DIR=/app/hexo
+            - HOST=xj9264.xyz
+        network_mode: "bridge"
         ports:
-            - 8080:8081
+            - 8081:8081
             # - 9000:9000
         # volumes:
             # - $(pwd)/hexo-data:/app/hexo
